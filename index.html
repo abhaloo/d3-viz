@@ -151,6 +151,8 @@
                     scatterplot.selectAll(".dot")
                         .filter(function (f) { return f.id == d.id })
                         .style("fill","red")
+                        .style("stroke", "#8e1b54")
+                        .attr("r", 5.5)
                 })
 				.on('mouseout', function(d) {
 
@@ -161,6 +163,8 @@
 				    scatterplot.selectAll(".dot")
                         .filter(function (f) { return f.id == d.id })
                         .style("fill",function(d) { return color(d[fieldColor]);})
+                        .style("stroke", null)
+                        .attr("r", 3.5)
                 });
 
 		svg.append('path')
